@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\vio2sf\desmume\armcpu.c" />
+    <ClCompile Include="src\vio2sf\desmume\arm_instructions.c" />
+    <ClCompile Include="src\vio2sf\desmume\bios.c" />
+    <ClCompile Include="src\vio2sf\desmume\cp15.c" />
+    <ClCompile Include="src\vio2sf\desmume\FIFO.c" />
+    <ClCompile Include="src\vio2sf\desmume\GPU.c" />
+    <ClCompile Include="src\vio2sf\desmume\matrix.c" />
+    <ClCompile Include="src\vio2sf\desmume\mc.c" />
+    <ClCompile Include="src\vio2sf\desmume\MMU.c" />
+    <ClCompile Include="src\vio2sf\desmume\NDSSystem.c" />
+    <ClCompile Include="src\vio2sf\desmume\SPU.cpp" />
+    <ClCompile Include="src\vio2sf\desmume\state.c" />
+    <ClCompile Include="src\vio2sf\desmume\thumb_instructions.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\vio2sf\desmume\ARM9.h" />
+    <ClInclude Include="src\vio2sf\desmume\armcpu.h" />
+    <ClInclude Include="src\vio2sf\desmume\arm_instructions.h" />
+    <ClInclude Include="src\vio2sf\desmume\bios.h" />
+    <ClInclude Include="src\vio2sf\desmume\bits.h" />
+    <ClInclude Include="src\vio2sf\desmume\config.h" />
+    <ClInclude Include="src\vio2sf\desmume\cp15.h" />
+    <ClInclude Include="src\vio2sf\desmume\debug.h" />
+    <ClInclude Include="src\vio2sf\desmume\dscard.h" />
+    <ClInclude Include="src\vio2sf\desmume\FIFO.h" />
+    <ClInclude Include="src\vio2sf\desmume\GPU.h" />
+    <ClInclude Include="src\vio2sf\desmume\matrix.h" />
+    <ClInclude Include="src\vio2sf\desmume\mc.h" />
+    <ClInclude Include="src\vio2sf\desmume\mem.h" />
+    <ClInclude Include="src\vio2sf\desmume\MMU.h" />
+    <ClInclude Include="src\vio2sf\desmume\NDSSystem.h" />
+    <ClInclude Include="src\vio2sf\desmume\registers.h" />
+    <ClInclude Include="src\vio2sf\desmume\SPU.h" />
+    <ClInclude Include="src\vio2sf\desmume\spu_exports.h" />
+    <ClInclude Include="src\vio2sf\desmume\state.h" />
+    <ClInclude Include="src\vio2sf\desmume\thumb_instructions.h" />
+    <ClInclude Include="src\vio2sf\desmume\types.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\vio2sf\desmume\COPYING" />
+    <None Include="src\vio2sf\desmume\instruction_tabdef.inc" />
+    <None Include="src\vio2sf\desmume\thumb_tabdef.inc" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{804AF6A5-694F-4EE0-BDF2-5FF62B32FB4E}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>vio2sf</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110_xp</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110_xp</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <EnableEnhancedInstructionSet>NoExtensions</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
