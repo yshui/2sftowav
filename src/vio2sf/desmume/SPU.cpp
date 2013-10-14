@@ -51,7 +51,7 @@
 #include "state.h"
 
 //===================CONFIGURATION========================
-bool isChannelMuted(NDS_state *state, int num) { return state->dwChannelMute&(1<<num); }
+bool isChannelMuted(NDS_state *state, int num) { return state->dwChannelMute&(1<<num) ? true : false; }
 SPUInterpolationMode spuInterpolationMode(NDS_state *state) { return (SPUInterpolationMode)state->dwInterpolation; }
 //=========================================================
 

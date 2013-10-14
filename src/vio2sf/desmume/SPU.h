@@ -138,9 +138,8 @@ struct channel_struct
    s16 psgnoise_last;
 } ;
 
-class SPU_struct
+struct SPU_struct
 {
-public:
 	SPU_struct(NDS_state *state, int buffersize);
    u32 bufpos;
    u32 buflength;
