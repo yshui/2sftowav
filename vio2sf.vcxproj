@@ -17,6 +17,7 @@
     <ClCompile Include="src\vio2sf\desmume\cp15.c" />
     <ClCompile Include="src\vio2sf\desmume\FIFO.c" />
     <ClCompile Include="src\vio2sf\desmume\GPU.c" />
+    <ClCompile Include="src\vio2sf\desmume\isqrt.c" />
     <ClCompile Include="src\vio2sf\desmume\matrix.c" />
     <ClCompile Include="src\vio2sf\desmume\mc.c" />
     <ClCompile Include="src\vio2sf\desmume\MMU.c" />
@@ -37,6 +38,7 @@
     <ClInclude Include="src\vio2sf\desmume\dscard.h" />
     <ClInclude Include="src\vio2sf\desmume\FIFO.h" />
     <ClInclude Include="src\vio2sf\desmume\GPU.h" />
+    <ClInclude Include="src\vio2sf\desmume\isqrt.h" />
     <ClInclude Include="src\vio2sf\desmume\matrix.h" />
     <ClInclude Include="src\vio2sf\desmume\mc.h" />
     <ClInclude Include="src\vio2sf\desmume\mem.h" />

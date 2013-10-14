@@ -24,6 +24,7 @@
 #include "MMU.h"
 #include "spu_exports.h"
 #include "debug.h"
+#include "isqrt.h"
 
 #include "state.h"
 
@@ -934,7 +935,7 @@ u32 Diff16bitUnFilter(armcpu_t* cpu)
 
 u32 bios_sqrt(armcpu_t* cpu)
 {
-     cpu->R[0] = (u32)sqrt((double)(cpu->R[0]));
+     cpu->R[0] = isqrt32(cpu->R[0]);
      return 1;
 }
 
