@@ -18,7 +18,7 @@ uint32_t isqrt32(uint32_t n) {
   return s;
 }
 
-uint64_t isqrtl64(uint64_t n) {
+uint64_t isqrt64(uint64_t n) {
   uint64_t s, t;
 
 #define sqrtBit(k) \
