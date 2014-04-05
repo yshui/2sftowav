@@ -18,11 +18,11 @@
     <ClCompile Include="src\vio2sf\desmume\FIFO.c" />
     <ClCompile Include="src\vio2sf\desmume\GPU.c" />
     <ClCompile Include="src\vio2sf\desmume\isqrt.c" />
-    <ClCompile Include="src\vio2sf\desmume\lanczos_resampler.c" />
     <ClCompile Include="src\vio2sf\desmume\matrix.c" />
     <ClCompile Include="src\vio2sf\desmume\mc.c" />
     <ClCompile Include="src\vio2sf\desmume\MMU.c" />
     <ClCompile Include="src\vio2sf\desmume\NDSSystem.c" />
+    <ClCompile Include="src\vio2sf\desmume\resampler.c" />
     <ClCompile Include="src\vio2sf\desmume\SPU.cpp" />
     <ClCompile Include="src\vio2sf\desmume\state.c" />
     <ClCompile Include="src\vio2sf\desmume\thumb_instructions.c" />
@@ -40,13 +40,13 @@
     <ClInclude Include="src\vio2sf\desmume\FIFO.h" />
     <ClInclude Include="src\vio2sf\desmume\GPU.h" />
     <ClInclude Include="src\vio2sf\desmume\isqrt.h" />
-    <ClInclude Include="src\vio2sf\desmume\lanczos_resampler.h" />
     <ClInclude Include="src\vio2sf\desmume\matrix.h" />
     <ClInclude Include="src\vio2sf\desmume\mc.h" />
     <ClInclude Include="src\vio2sf\desmume\mem.h" />
     <ClInclude Include="src\vio2sf\desmume\MMU.h" />
     <ClInclude Include="src\vio2sf\desmume\NDSSystem.h" />
     <ClInclude Include="src\vio2sf\desmume\registers.h" />
+    <ClInclude Include="src\vio2sf\desmume\resampler.h" />
     <ClInclude Include="src\vio2sf\desmume\SPU.h" />
     <ClInclude Include="src\vio2sf\desmume\spu_exports.h" />
     <ClInclude Include="src\vio2sf\desmume\state.h" />

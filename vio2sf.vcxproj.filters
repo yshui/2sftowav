@@ -53,7 +53,7 @@
     <ClCompile Include="src\vio2sf\desmume\isqrt.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\vio2sf\desmume\lanczos_resampler.c">
+    <ClCompile Include="src\vio2sf\desmume\resampler.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -127,7 +127,7 @@
     <ClInclude Include="src\vio2sf\desmume\isqrt.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\vio2sf\desmume\lanczos_resampler.h">
+    <ClInclude Include="src\vio2sf\desmume\resampler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
