@@ -13,6 +13,7 @@
   <ItemGroup>
     <ClCompile Include="src\vio2sf\desmume\armcpu.c" />
     <ClCompile Include="src\vio2sf\desmume\arm_instructions.c" />
+    <ClCompile Include="src\vio2sf\desmume\barray.c" />
     <ClCompile Include="src\vio2sf\desmume\bios.c" />
     <ClCompile Include="src\vio2sf\desmume\cp15.c" />
     <ClCompile Include="src\vio2sf\desmume\FIFO.c" />
@@ -31,6 +32,7 @@
     <ClInclude Include="src\vio2sf\desmume\ARM9.h" />
     <ClInclude Include="src\vio2sf\desmume\armcpu.h" />
     <ClInclude Include="src\vio2sf\desmume\arm_instructions.h" />
+    <ClInclude Include="src\vio2sf\desmume\barray.h" />
     <ClInclude Include="src\vio2sf\desmume\bios.h" />
     <ClInclude Include="src\vio2sf\desmume\bits.h" />
     <ClInclude Include="src\vio2sf\desmume\config.h" />
