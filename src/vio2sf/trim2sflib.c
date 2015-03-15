@@ -346,8 +346,6 @@ int main(int argc, char ** argv)
         NDS_state * core = ( NDS_state * ) calloc(1, sizeof(NDS_state));
         s16 buffer[2048];
         
-        FILE * f_raw;
-        
         int i, j;
         for (i = 2; i < argc; ++i)
         {
@@ -398,14 +396,11 @@ int main(int argc, char ** argv)
             
             fprintf(stderr, "Clocking %s...", argv[i]);
             
-            f_raw = fopen("out.raw", "wb");
-            
             for (;;)
             {
                 for (j = 0; j < 44100 * 5; j += 1024)
                 {
                     state_render(core, (s16*)buffer, 1024);
-                    fwrite(buffer, 4, 1024, f_raw);
                 }
                 total_rendered += j;
                 current_bits_set = bit_array_count(core->array_rom_coverage);
@@ -417,14 +412,12 @@ int main(int argc, char ** argv)
                 else
                 {
                     blocks_without_coverage++;
-                    if (blocks_without_coverage >= 30)
+                    if (blocks_without_coverage >= 6)
                     {
                         break;
                     }
                 }
             }
-            
-            fclose(f_raw);
             
             if ( !array_combined )
             {
@@ -621,6 +614,8 @@ int main(int argc, char ** argv)
             set_le32(out_name, z.total_out);
             set_le32(out_name + 4, zcrc);
             fwrite(out_name, 1, 8, f_out);
+
+            fprintf(stderr, "New compressed ROM size: %zu\n", z.total_out);
             
             deflateEnd(&z);
             
