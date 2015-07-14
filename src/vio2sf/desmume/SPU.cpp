@@ -354,7 +354,6 @@ void SPU_struct::KeyOn(int channel)
 	{
 		if(thischan.double_totlength_shifted == 0)
 		{
-			printf("INFO: Stopping channel %d due to zero length\n",channel);
 			thischan.status = CHANSTAT_STOPPED;
 		}
 	}
@@ -542,7 +541,6 @@ static FORCEINLINE void FetchADPCMDataInternal(channel_struct * const chan, s32 
 			chan->pcm16b = (s16)(MinMax(chan->pcm16b+diff, -0x8000, 0x7FFF));
 
 			if(i == (chan->loopstart<<3)) {
-				if(chan->loop_index != K_ADPCM_LOOPING_RECOVERY_INDEX) printf("over-snagging\n");
 				chan->loop_pcm16b = chan->pcm16b;
 				chan->loop_index = chan->index;
 			}
