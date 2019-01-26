@@ -338,6 +338,11 @@ void add_block_zero(u8 ** start_ptr, u8 ** current_ptr, u8 ** end_ptr, u32 size)
     *current_ptr += size;
 }
 
+static void print_message( void * unused, const char * message )
+{
+    fputs( message, stderr );
+}
+
 int main(int argc, char ** argv)
 {
     if (argc >= 3)
@@ -357,7 +362,7 @@ int main(int argc, char ** argv)
             memset( &state, 0, sizeof(state) );
             state.initial_frames = -1;
             
-            if ( psf_load( argv[i], &stdio_callbacks, 0x24, twosf_loader, &state, twosf_info, &state, 1 ) <= 0 )
+            if ( psf_load( argv[i], &stdio_callbacks, 0x24, twosf_loader, &state, twosf_info, &state, 1, print_message, 0 ) <= 0 )
             {
                 if (state.rom) free(state.rom);
                 if (state.state) free(state.state);
