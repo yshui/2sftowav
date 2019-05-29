@@ -1,0 +1,3 @@
+[submodule "src/psflib"]
+	path = src/psflib
+	url = https://github.com/kode54/psflib.git
